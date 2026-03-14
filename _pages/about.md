@@ -140,11 +140,11 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
   <ul>
     <li>
       <span class="news-date">2025.02</span> 
-      🎉 "M^3-VOS" was accepted to  <strong>CVPR 2025</strong>.
+      🎉 "M^3-VOS" was accepted to&nbsp;<strong>CVPR 2025</strong>.
     </li>
     <li>
       <span class="news-date">2020.03</span> 
-      🎉 "LNE-IMGM" was accepted to  <strong>ECCV 2020</strong>.
+      🎉 "LNE-IMGM" was accepted to&nbsp;<strong>ECCV 2020</strong>.
     </li>
   </ul>
 </div>
