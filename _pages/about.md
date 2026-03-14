@@ -102,7 +102,7 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
 * **Brain-like Intelligence:** Developing neuro-symbolic architectures inspired by biological cognitive processes.
 
 ---
-### 📢 News
+### 📢 News {#news}
 <div class="news-container">
   <ul>
     <li>
@@ -118,7 +118,7 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
 
 ---
 
-### 📝 Selected Publications
+### 📝 Selected Publications {#publications}
 (* equal contribution)
 
 <div class="pub-item">
@@ -127,7 +127,7 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
   <span class="pub-venue">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2025.</span>
   <a href="https://arxiv.org/pdf/2412.13803" class="btn-box">📄 PDF</a>
   <a href="https://zixuan-chen.github.io/M-cube-VOS.github.io/" class="btn-box">🌐 Website</a>
-  <a href="https://github.com/zixuan-chen/StratCausal" class="btn-box">💻 Code</a>
+  <a href="https://github.com/zixuan-chen/M3VOS_Experimentl" class="btn-box">💻 Code</a>
   <a href="https://huggingface.co/datasets/Lijiaxin0111/M3_VOS" class="btn-box">📊 Dataset</a>
   <a href="https://github.com/Lijiaxin0111/SemiAuto-Multi-Level-Annotation-Tool" class="btn-box">🛠️ Tool</a>
 </div>
@@ -137,15 +137,16 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
   <span class="pub-authors"><strong>Zixuan Chen</strong>, Z. Xie, J. Yan, Y. Zheng, X. Yang.</span>
   <span class="pub-venue">European Conference on Computer Vision (<strong>ECCV</strong>), 251-267, 2020.</span>
   <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123550256.pdf" class="btn-box">📄 PDF</a>
+  <a href="https://github.com/zhxieml/LNE_IMGM" class="btn-box">💻 Code</a>
 </div>
 
 ---
 
-### 🎓 Education
+### 🎓 Education {#education}
 * **Ph.D. Candidate** in Computer Science, Shanghai Jiao Tong University, 2024.09 - Present.
 * **M.S.** in Computer Science, Shanghai Jiao Tong University, 2020.09 - 2023.03.
 * **B.S.** in Computer Science (IEEE Honor Class), Shanghai Jiao Tong University, 2016.06 - 2020.04.
 
 
-### 🏛️ Academic Services
+### 🏛️ Academic Services {#services}
 * **Conference Reviewer:** CVPR, NIPS.
