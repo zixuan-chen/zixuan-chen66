@@ -14,13 +14,30 @@ body {
 }
 
 /* 优雅的下划线设计，使用 rgba 适应深浅色背景 */
-h2, h3 {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  border-bottom: 2px solid rgba(128, 128, 128, 0.15); /* 半透明浅灰色，白天浅，夜间深 */
+/* 针对所有标题的通用美化 */
+h1, h2, h3, h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;                 /* 加粗字体 */
+  border-bottom: 2px solid rgba(128, 128, 128, 0.15); /* 稍微加粗下划线，适应日夜模式 */
   padding-bottom: 10px;
-  margin-top: 2em; /* 增加模块上方的留白 */
-  letter-spacing: -0.01em;
+  margin-top: 2.5em;                /* 增加上方留白，让各板块区分更明显 */
+  margin-bottom: 1em;               /* 标题与下方内容的间距 */
+  letter-spacing: -0.02em;          /* 紧凑的字间距显得更高级 */
+}
+
+/* 专门把你的二级/三级标题字号调大 */
+h3 {
+  font-size: 1.6em !important;      /* 调大字号，原来通常在 1.1-1.2 左右 */
+}
+
+/* 如果你的 "About Me" 是 h1，可以根据需要调整 */
+h1 {
+  font-size: 2.2em !important;
+  margin-top: 1em;
+}
+
+h3 span {
+  margin-right: 10px;
 }
 
 /* 2. 新闻栏：无边框设计，高级感来源 */
@@ -179,6 +196,7 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
 * **M.S.** in Computer Science, Shanghai Jiao Tong University, 2020.09 - 2023.03.
 * **B.S.** in Computer Science (IEEE Honor Class), Shanghai Jiao Tong University, 2016.06 - 2020.04.
 
+---
 
 ### 🏛️ Academic Services {#services}
 * **Conference Reviewer:** CVPR, NIPS.
