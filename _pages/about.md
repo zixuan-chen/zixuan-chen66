@@ -15,30 +15,29 @@ body {
 
 /* 优雅的下划线设计，使用 rgba 适应深浅色背景 */
 /* 针对所有标题的通用美化 */
+/* 标题美化：回归标准字号，保留大气间距 */
 h1, h2, h3, h4 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 700;                 /* 加粗字体 */
-  border-bottom: 2px solid rgba(128, 128, 128, 0.15); /* 稍微加粗下划线，适应日夜模式 */
-  padding-bottom: 10px;
-  margin-top: 2.5em;                /* 增加上方留白，让各板块区分更明显 */
-  margin-bottom: 1em;               /* 标题与下方内容的间距 */
-  letter-spacing: -0.02em;          /* 紧凑的字间距显得更高级 */
+  font-weight: 600;                 /* 稍微调低一点粗细，显得更清秀 */
+  border-bottom: 1.5px solid rgba(128, 128, 128, 0.15); /* 稍微变细的下划线 */
+  padding-bottom: 8px;
+  margin-top: 2.2em;                /* 保持较大的上方留白，这是大气的关键 */
+  margin-bottom: 0.8em;             /* 标题与下方内容的间距 */
+  letter-spacing: -0.01em;
+  color: inherit;                   /* 确保颜色跟随白天/夜间模式自动切换 */
 }
 
-/* 专门把你的二级/三级标题字号调大 */
+/* 恢复到标准学术主页字号 */
 h3 {
-  font-size: 1.6em !important;      /* 调大字号，原来通常在 1.1-1.2 左右 */
+  font-size: 1.25em !important;     /* 恢复到原来的大小 */
 }
 
-/* 如果你的 "About Me" 是 h1，可以根据需要调整 */
+/* About Me 标题也同步微调 */
 h1 {
-  font-size: 2.2em !important;
+  font-size: 1.8em !important;      /* 稍微大一点但不过分 */
   margin-top: 1em;
 }
 
-h3 span {
-  margin-right: 10px;
-}
 
 /* 2. 新闻栏：无边框设计，高级感来源 */
 .news-container {
