@@ -6,10 +6,24 @@ author_profile: true
 ---
 
 <style>
-#main {
-  max-width: 1000px; /* 限制最大宽度，避免在大屏上拉得太开 */
-  padding-left: 2em;
-  padding-right: 2em;
+/* 调整主体容器宽度，防止内容挤在中间 */
+#main { 
+  max-width: 100%; /* 让外层容器占满 */
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.archive, .page {
+  width: 100% !important; /* 强制内容区展开 */
+}
+
+/* 如果你觉得侧边栏太宽挤占了内容，可以微调比例 */
+.sidebar {
+  width: 250px !important;
+}
+
+.page__content {
+  width: calc(100% - 300px) !important; /* 确保右侧内容有足够空间 */
 }
 
 /* 修改全局字体风格 */
@@ -55,10 +69,9 @@ a:hover {
 }
 .news-container li {
   margin-bottom: 12px;
-  font-size: 0.95em;
-  display: flex;       /* 确保日期和文字水平对齐 */
-  align-items: flex-start; /* 文字多行时，日期顶格对齐 */
-  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.8; /* 增加行高，让文字更有呼吸感 */
 }
 
 /* 2. 日期方框 - 增加了 flex-shrink 保证方框不缩水 */
@@ -77,10 +90,12 @@ a:hover {
 }
 
 /* 3. 论文列表项 */
+/* 确保论文链接在宽屏下不会堆叠 */
 .pub-item {
-  margin-bottom: 25px;
-  list-style: none;
+  width: 100%;
+  margin-bottom: 35px;
 }
+
 .pub-title {
   font-weight: bold;
   font-size: 1.05em;
