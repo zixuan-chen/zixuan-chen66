@@ -6,108 +6,127 @@ author_profile: true
 ---
 
 <style>
-/* 1. 全局字体与排版 - 移除硬编码颜色，让主题自动处理夜间模式文字 */
+/* 1. 整体布局：增加呼吸感 */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  /* 删除了 color: #333，让主题自动切换黑白文字 */
+  background-color: #fdfdfd; /* 极其微弱的米白，增加高级感 */
 }
 
-h1, h2, h3, h4 {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.2); /* 使用半透明边框 */
-  padding-bottom: 8px;
-  margin-top: 1.5em;
-  /* 删除了 color: #222 */
+#main {
+  max-width: 1140px; /* 经典的学术主页宽度 */
+  margin: 40px auto;
+  display: flex;
+  gap: 50px; /* 增加侧边栏和内容之间的间距 */
 }
 
-/* 链接颜色 */
-a {
-  color: #0366d6;
-  text-decoration: none;
+/* 2. 侧边栏：加入浅色背景块 */
+.sidebar {
+  width: 280px !important;
+  flex-shrink: 0;
+  background: rgba(128, 128, 128, 0.03); /* 侧边栏加一层淡淡的底色 */
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.05);
 }
 
-/* 2. 滚动新闻栏 - 使用 rgba 半透明背景，自动适配白天/夜间 */
+/* 3. 标题排版：更考究的线条 */
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 2em;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f1f1; /* 加粗线条但颜色变淡 */
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+/* 4. 新闻栏：去框化设计 */
 .news-container {
-  height: 180px;
+  height: 200px;
   overflow-y: auto;
-  border: 1px solid rgba(128, 128, 128, 0.2); /* 半透明边框 */
-  padding: 15px;
-  background-color: rgba(128, 128, 128, 0.05); /* 极淡的半透明背景 */
-  border-radius: 8px;
-  margin-bottom: 30px;
+  border: none; /* 去掉生硬的边框 */
+  padding: 5px 0;
+  margin-bottom: 40px;
 }
-.news-container ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+
 .news-container li {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   display: flex;
   align-items: flex-start;
-  line-height: 1.6;
+  font-size: 0.98em;
 }
 
-/* 日期方框 - 使用半透明灰色 */
 .news-date {
-  display: inline-block;
-  background-color: rgba(128, 128, 128, 0.15); 
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-family: Menlo, Monaco, Consolas, monospace;
+  background-color: #f0f2f5;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 0.85em;
-  margin-right: 12px;
-  min-width: 75px;
+  font-weight: 600;
+  color: #555;
+  margin-right: 18px;
+  min-width: 80px;
   text-align: center;
   flex-shrink: 0;
 }
 
-/* 3. 论文列表项 */
+/* 5. 论文列表：加大垂直间距 */
 .pub-item {
-  width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
+  padding-left: 5px;
 }
+
 .pub-title {
-  font-weight: bold;
-  font-size: 1.05em;
-  display: block;
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-bottom: 5px;
 }
+
 .pub-authors {
   font-size: 0.95em;
-  display: block;
-  margin: 4px 0;
-  opacity: 0.8; /* 使用透明度而不是固定颜色 */
+  opacity: 0.85;
 }
+
 .pub-venue {
   font-style: italic;
   font-size: 0.95em;
-  display: block;
-  opacity: 0.7;
+  color: #666;
+  margin-top: 2px;
 }
 
-/* 4. 自适应按钮 - 背景透明，边框适应主题 */
+/* 6. 按钮：更轻盈的阴影 */
 .btn-box {
   display: inline-block;
-  padding: 3px 12px;
-  margin-right: 8px;
-  margin-top: 10px;
-  border-radius: 20px;
-  background-color: rgba(128, 128, 128, 0.05); /* 半透明背景 */
-  color: inherit !important; /* 强制继承主题的文字颜色 */
-  font-size: 0.8em;
+  padding: 4px 16px;
+  margin-right: 10px;
+  margin-top: 12px;
+  border-radius: 25px;
+  background-color: transparent; /* 透明背景 */
+  color: inherit !important;
+  font-size: 0.82em;
   font-weight: 500;
-  text-decoration: none !important;
-  border: 1px solid rgba(128, 128, 128, 0.3); /* 半透明边框 */
-  transition: all 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-box:hover {
-  background-color: rgba(128, 128, 128, 0.15);
+  background-color: #0366d6;
+  color: #fff !important;
   border-color: #0366d6;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(3, 102, 214, 0.2);
+}
+
+/* 夜间模式适配：针对 rgba 的微调 */
+[data-theme='dark'] .sidebar {
+  background: rgba(255, 255, 255, 0.05);
+}
+[data-theme='dark'] .news-date {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
 }
 </style>
 
