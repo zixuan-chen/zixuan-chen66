@@ -69,24 +69,29 @@ author_profile: true
   color: #555;
 }
 
-/* 4. 链接按钮 - 增加了平滑过渡效果 */
+/* 4. 链接按钮 - 从黑色改为白色风格 */
 .btn-box {
   display: inline-block;
   padding: 2px 10px;
   margin-right: 6px;
   margin-top: 8px;
   border-radius: 6px;
-  background-color: #24292e; /* GitHub 经典的深色 */
-  color: #ffffff !important;
+  background-color: #ffffff; /* 背景改为白色 */
+  color: #333333 !important; /* 文字颜色改为深灰色 */
   font-size: 0.85em;
+  font-weight: 500;
   text-decoration: none !important;
-  border: 1px solid rgba(27,31,35,.15);
-  transition: all 0.2s ease; /* 鼠标悬停动画 */
+  border: 1px solid #d1d5da; /* 添加浅灰色边框 */
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* 添加极其轻微的阴影增强质感 */
 }
+
 .btn-box:hover {
-  background-color: #444d56;
-  transform: translateY(-1px); /* 悬停微动，更有质感 */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #f6f8fa; /* 悬停时稍微变灰 */
+  color: #0366d6 !important; /* 悬停时文字变为蓝色（类似GitHub链接色） */
+  border-color: #babbbd;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 </style>
 
