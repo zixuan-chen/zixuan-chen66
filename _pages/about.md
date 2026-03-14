@@ -6,125 +6,121 @@ author_profile: true
 ---
 
 <style>
-/* 1. 核心布局修复：让整体居中 */
-#main {
-  max-width: 1200px; /* 限制最大宽度，不再全屏铺满 */
-  margin: 0 auto;    /* 核心：让整个容器在页面水平居中 */
-  padding: 2em 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* 侧边栏宽度固定，不随内容拉伸 */
-.sidebar {
-  width: 260px !important;
-  margin-right: 40px !important;
-  flex-shrink: 0;
-}
-
-/* 内容区自适应，但限制最大宽度增加易读性 */
-.archive, .page {
-  width: auto !important;
-  flex-grow: 1;
-}
-
-.page__content {
-  width: 100% !important;
-  padding-right: 0 !important;
-}
-
-/* 2. 字体与全局风格 (模仿陈子轩主页的清爽感) */
+/* 1. 全局字体与排版美化 (保留清爽风格) */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #333;
-  line-height: 1.65;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 600;
-  color: #111;
-  border-bottom: 1px solid #eee; /* 简洁的下划线 */
-  padding-bottom: 10px;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
   margin-top: 1.5em;
 }
 
-/* 3. 新闻栏美化 */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 2. 滚动新闻栏 */
 .news-container {
-  height: 200px;
+  height: 180px;
   overflow-y: auto;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #f0f0f0;
   padding: 15px;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   border-radius: 8px;
   margin-bottom: 30px;
 }
-
+.news-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
 .news-container li {
   margin-bottom: 12px;
   display: flex;
   align-items: flex-start;
-  line-height: 1.6;
-  font-size: 0.95em;
+  line-height: 1.6; /* 稍微调小行高避免太散 */
 }
 
+/* 日期方框 */
 .news-date {
-  background-color: #f1f1f1;
+  display: inline-block;
+  background-color: #eef0f2;
   padding: 2px 8px;
   border-radius: 4px;
-  font-family: "SFMono-Regular", Consolas, monospace;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 0.85em;
-  color: #666;
-  margin-right: 15px;
+  color: #555;
+  margin-right: 12px;
   min-width: 75px;
   text-align: center;
   flex-shrink: 0;
 }
 
-/* 4. 白色论文链接按钮 (优化圆角与边框) */
+/* 3. 论文列表项 */
+.pub-item {
+  width: 100%;
+  margin-bottom: 35px;
+}
+.pub-title {
+  font-weight: bold;
+  font-size: 1.05em;
+  display: block;
+  color: #222;
+}
+.pub-authors {
+  font-size: 0.95em;
+  color: #444;
+  display: block;
+  margin: 4px 0;
+}
+.pub-venue {
+  font-style: italic;
+  font-size: 0.95em;
+  display: block;
+  color: #555;
+}
+
+/* 4. 白色药丸形按钮 */
 .btn-box {
   display: inline-block;
-  padding: 4px 14px;
-  margin-right: 10px;
+  padding: 3px 12px;
+  margin-right: 8px;
   margin-top: 10px;
-  border-radius: 20px; /* 圆润的药丸形按钮 */
+  border-radius: 20px;
   background-color: #ffffff;
   color: #444 !important;
-  font-size: 0.85em;
+  font-size: 0.8em;
   font-weight: 500;
   text-decoration: none !important;
-  border: 1px solid #e1e4e8;
-  transition: all 0.2s ease-in-out;
+  border: 1px solid #d1d5da;
+  transition: all 0.2s ease;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .btn-box:hover {
-  background-color: #f8f9fa;
+  background-color: #f6f8fa;
   border-color: #0366d6;
   color: #0366d6 !important;
   transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-/* 移动端适配：手机上恢复单列 */
-@media (max-width: 800px) {
-  #main {
-    flex-direction: column;
-    padding: 1em;
-  }
-  .sidebar {
-    width: 100% !important;
-    margin-right: 0 !important;
-    margin-bottom: 2em;
-  }
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 </style>
 
-
 Hi! I am Zixuan Chen (陈子轩).I am a Ph.D. Candidate at School of Computer Science, [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/). 
 
-I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. Yonglu-Li](https://dirtyharrylyl.github.io/) .
+I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. Yong-Lu Li](https://dirtyharrylyl.github.io/) .
 
 
 ### 🔬 Research Interests
