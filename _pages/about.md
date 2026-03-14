@@ -75,6 +75,15 @@ h2, h3 {
   margin-bottom: 6px;
 }
 
+/* 论文备注样式：灰色、斜体、自适应日夜模式 */
+.pub-note {
+  font-size: 0.9em;
+  font-style: italic;     /* 设置斜体 */
+  margin-bottom: 15px;
+  opacity: 0.6;           /* 使用透明度实现灰色，可自动适配白天/夜间模式 */
+  font-family: inherit;
+}
+
 .pub-authors {
   font-size: 0.95em;
   display: block;
@@ -142,11 +151,11 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
 ---
 
 ### 📝 Selected Publications {#publications}
-(* equal contribution)
+<div class="pub-note">(* equal contribution)</div>
 
 <div class="pub-item">
   <span class="pub-title">M^3-VOS: Multi-Phase, Multi-Transition, and Multi-Scenery Video Object Segmentation</span>
-  <span class="pub-authors"><strong>Zixuan Chen</strong>, J. Li, J. Liang, L. Tan, Y. Guo, C. Lu, Y. L. Li.</span>
+  <span class="pub-authors"><strong>Zixuan Chen</strong>*, J. Li*, J. Liang, L. Tan, Y. Guo, C. Lu, Y. L. Li.</span>
   <span class="pub-venue">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2025.</span>
   <a href="https://arxiv.org/pdf/2412.13803" class="btn-box">📄 PDF</a>
   <a href="https://zixuan-chen.github.io/M-cube-VOS.github.io/" class="btn-box">🌐 Website</a>
