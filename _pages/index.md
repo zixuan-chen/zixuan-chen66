@@ -1,7 +1,11 @@
 ---
-layout: default
+layout: archive
+author_profile: true
+title: "About Me"
 ---
+
 <style>
+#main { max-width: 1200px; }
 /* 1. 滚动新闻栏 - 优化了重复定义的 li */
 .news-container {
   height: 180px;
