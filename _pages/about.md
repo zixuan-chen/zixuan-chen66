@@ -6,135 +6,118 @@ author_profile: true
 ---
 
 <style>
-/* 调整主体容器宽度，防止内容挤在中间 */
-#main { 
-  max-width: 100%; /* 让外层容器占满 */
-  padding-left: 5%;
-  padding-right: 5%;
+/* 1. 核心布局修复：让整体居中 */
+#main {
+  max-width: 1200px; /* 限制最大宽度，不再全屏铺满 */
+  margin: 0 auto;    /* 核心：让整个容器在页面水平居中 */
+  padding: 2em 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.archive, .page {
-  width: 100% !important; /* 强制内容区展开 */
-}
-
-/* 如果你觉得侧边栏太宽挤占了内容，可以微调比例 */
+/* 侧边栏宽度固定，不随内容拉伸 */
 .sidebar {
-  width: 250px !important;
+  width: 260px !important;
+  margin-right: 40px !important;
+  flex-shrink: 0;
+}
+
+/* 内容区自适应，但限制最大宽度增加易读性 */
+.archive, .page {
+  width: auto !important;
+  flex-grow: 1;
 }
 
 .page__content {
-  width: calc(100% - 300px) !important; /* 确保右侧内容有足够空间 */
+  width: 100% !important;
+  padding-right: 0 !important;
 }
 
-/* 修改全局字体风格 */
+/* 2. 字体与全局风格 (模仿陈子轩主页的清爽感) */
 body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #333;
-  line-height: 1.6; /* 适当增加行间距，增加呼吸感 */
-  -webkit-font-smoothing: antialiased; /* 让字体看起来更清秀 */
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* 标题字体微调 */
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 600; /* 调低标题粗细，避免过于笨重 */
-  color: #222;
-  border-bottom: 1px solid #eee; /* 模仿她那种简洁的分隔线 */
-  padding-bottom: 8px;
+  font-weight: 600;
+  color: #111;
+  border-bottom: 1px solid #eee; /* 简洁的下划线 */
+  padding-bottom: 10px;
+  margin-top: 1.5em;
 }
 
-/* 链接颜色微调 */
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* 1. 滚动新闻栏 - 优化了重复定义的 li */
+/* 3. 新闻栏美化 */
 .news-container {
-  height: 180px;
+  height: 200px;
   overflow-y: auto;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #f1f1f1;
   padding: 15px;
-  background-color: #fafafa;
+  background-color: #fcfcfc;
   border-radius: 8px;
   margin-bottom: 30px;
 }
-.news-container ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+
 .news-container li {
   margin-bottom: 12px;
   display: flex;
   align-items: flex-start;
-  line-height: 1.8; /* 增加行高，让文字更有呼吸感 */
+  line-height: 1.6;
+  font-size: 0.95em;
 }
 
-/* 2. 日期方框 - 增加了 flex-shrink 保证方框不缩水 */
 .news-date {
-  display: inline-block;
   background-color: #f1f1f1;
   padding: 2px 8px;
   border-radius: 4px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 0.85em;
   color: #666;
-  margin-right: 12px;
-  min-width: 75px;    /* 稍微加宽一点，防止 2026.01.01 这种长日期放不下 */
+  margin-right: 15px;
+  min-width: 75px;
   text-align: center;
-  flex-shrink: 0;     /* 重要：防止在窄屏下日期方框被挤压变形 */
+  flex-shrink: 0;
 }
 
-/* 3. 论文列表项 */
-/* 确保论文链接在宽屏下不会堆叠 */
-.pub-item {
-  width: 100%;
-  margin-bottom: 35px;
-}
-
-.pub-title {
-  font-weight: bold;
-  font-size: 1.05em;
-  display: block;
-  color: #222;
-}
-.pub-authors {
-  font-size: 0.95em;
-  color: #444;
-  display: block;
-  margin: 4px 0;
-}
-.pub-venue {
-  font-style: italic;
-  font-size: 0.95em;
-  display: block;
-  color: #555;
-}
-
+/* 4. 白色论文链接按钮 (优化圆角与边框) */
 .btn-box {
   display: inline-block;
-  padding: 3px 12px; /* 增加一点内边距 */
-  margin-right: 8px;
+  padding: 4px 14px;
+  margin-right: 10px;
   margin-top: 10px;
-  border-radius: 20px; /* 改为圆角矩形，会显得更现代 */
+  border-radius: 20px; /* 圆润的药丸形按钮 */
   background-color: #ffffff;
   color: #444 !important;
-  font-size: 0.8em;
-  font-weight: 400;
+  font-size: 0.85em;
+  font-weight: 500;
   text-decoration: none !important;
   border: 1px solid #e1e4e8;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .btn-box:hover {
-  background-color: #f3f4f5;
+  background-color: #f8f9fa;
   border-color: #0366d6;
   color: #0366d6 !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* 移动端适配：手机上恢复单列 */
+@media (max-width: 800px) {
+  #main {
+    flex-direction: column;
+    padding: 1em;
+  }
+  .sidebar {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-bottom: 2em;
+  }
 }
 </style>
 
