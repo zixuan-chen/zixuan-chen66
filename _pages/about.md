@@ -6,38 +6,36 @@ author_profile: true
 ---
 
 <style>
-/* 1. 全局字体与排版美化 (保留清爽风格) */
+/* 1. 全局字体与排版 - 移除硬编码颜色，让主题自动处理夜间模式文字 */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #333;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  /* 删除了 color: #333，让主题自动切换黑白文字 */
 }
 
 h1, h2, h3, h4 {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 600;
-  color: #222;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2); /* 使用半透明边框 */
   padding-bottom: 8px;
   margin-top: 1.5em;
+  /* 删除了 color: #222 */
 }
 
+/* 链接颜色 */
 a {
   color: #0366d6;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
 
-/* 2. 滚动新闻栏 */
+/* 2. 滚动新闻栏 - 使用 rgba 半透明背景，自动适配白天/夜间 */
 .news-container {
   height: 180px;
   overflow-y: auto;
-  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(128, 128, 128, 0.2); /* 半透明边框 */
   padding: 15px;
-  background-color: #fafafa;
+  background-color: rgba(128, 128, 128, 0.05); /* 极淡的半透明背景 */
   border-radius: 8px;
   margin-bottom: 30px;
 }
@@ -50,18 +48,17 @@ a:hover {
   margin-bottom: 12px;
   display: flex;
   align-items: flex-start;
-  line-height: 1.6; /* 稍微调小行高避免太散 */
+  line-height: 1.6;
 }
 
-/* 日期方框 */
+/* 日期方框 - 使用半透明灰色 */
 .news-date {
   display: inline-block;
-  background-color: #eef0f2;
+  background-color: rgba(128, 128, 128, 0.15); 
   padding: 2px 8px;
   border-radius: 4px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 0.85em;
-  color: #555;
   margin-right: 12px;
   min-width: 75px;
   text-align: center;
@@ -77,44 +74,40 @@ a:hover {
   font-weight: bold;
   font-size: 1.05em;
   display: block;
-  color: #222;
 }
 .pub-authors {
   font-size: 0.95em;
-  color: #444;
   display: block;
   margin: 4px 0;
+  opacity: 0.8; /* 使用透明度而不是固定颜色 */
 }
 .pub-venue {
   font-style: italic;
   font-size: 0.95em;
   display: block;
-  color: #555;
+  opacity: 0.7;
 }
 
-/* 4. 白色药丸形按钮 */
+/* 4. 自适应按钮 - 背景透明，边框适应主题 */
 .btn-box {
   display: inline-block;
   padding: 3px 12px;
   margin-right: 8px;
   margin-top: 10px;
   border-radius: 20px;
-  background-color: #ffffff;
-  color: #444 !important;
+  background-color: rgba(128, 128, 128, 0.05); /* 半透明背景 */
+  color: inherit !important; /* 强制继承主题的文字颜色 */
   font-size: 0.8em;
   font-weight: 500;
   text-decoration: none !important;
-  border: 1px solid #d1d5da;
+  border: 1px solid rgba(128, 128, 128, 0.3); /* 半透明边框 */
   transition: all 0.2s ease;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .btn-box:hover {
-  background-color: #f6f8fa;
+  background-color: rgba(128, 128, 128, 0.15);
   border-color: #0366d6;
-  color: #0366d6 !important;
   transform: translateY(-1px);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 </style>
 
