@@ -90,7 +90,6 @@ author_profile: true
 }
 </style>
 
-# About Me
 
 Hi! I am Zixuan Chen (陈子轩).I am a Ph.D. Candidate at School of Computer Science, [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/). 
 
