@@ -6,108 +6,111 @@ author_profile: true
 ---
 
 <style>
-/* 1. 全局字体与排版 - 移除硬编码颜色，让主题自动处理夜间模式文字 */
+/* 1. 全局字体与排版美化 (不改变颜色，适应日夜模式) */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7; /* 增加行高，提升呼吸感 */
   -webkit-font-smoothing: antialiased;
-  /* 删除了 color: #333，让主题自动切换黑白文字 */
 }
 
-h1, h2, h3, h4 {
+/* 优雅的下划线设计，使用 rgba 适应深浅色背景 */
+h2, h3 {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 600;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.2); /* 使用半透明边框 */
-  padding-bottom: 8px;
-  margin-top: 1.5em;
-  /* 删除了 color: #222 */
+  border-bottom: 2px solid rgba(128, 128, 128, 0.15); /* 半透明浅灰色，白天浅，夜间深 */
+  padding-bottom: 10px;
+  margin-top: 2em; /* 增加模块上方的留白 */
+  letter-spacing: -0.01em;
 }
 
-/* 链接颜色 */
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-
-/* 2. 滚动新闻栏 - 使用 rgba 半透明背景，自动适配白天/夜间 */
+/* 2. 新闻栏：无边框设计，高级感来源 */
 .news-container {
-  height: 180px;
+  height: 220px; /* 稍微加高一点，容纳更多内容不显得拥挤 */
   overflow-y: auto;
-  border: 1px solid rgba(128, 128, 128, 0.2); /* 半透明边框 */
-  padding: 15px;
-  background-color: rgba(128, 128, 128, 0.05); /* 极淡的半透明背景 */
-  border-radius: 8px;
-  margin-bottom: 30px;
+  border: none; /* 去除原本的方框，更加现代 */
+  padding: 5px 0;
+  margin-bottom: 40px;
 }
+
 .news-container ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
+
 .news-container li {
-  margin-bottom: 12px;
+  margin-bottom: 16px; /* 增加新闻条目之间的垂直间距 */
   display: flex;
   align-items: flex-start;
+  font-size: 0.95em;
   line-height: 1.6;
 }
 
-/* 日期方框 - 使用半透明灰色 */
+/* 日期标签：自适应日夜模式的淡灰色背景 */
 .news-date {
   display: inline-block;
-  background-color: rgba(128, 128, 128, 0.15); 
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-family: Menlo, Monaco, Consolas, monospace;
+  background-color: rgba(128, 128, 128, 0.1); /* 半透明背景 */
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: "SFMono-Regular", Consolas, Menlo, monospace;
   font-size: 0.85em;
-  margin-right: 12px;
-  min-width: 75px;
+  font-weight: 500;
+  margin-right: 18px; /* 增加日期与文字的间距 */
+  min-width: 78px;
   text-align: center;
   flex-shrink: 0;
 }
 
-/* 3. 论文列表项 */
+/* 3. 论文列表项排版 */
 .pub-item {
-  width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 45px; /* 加大每篇论文之间的垂直距离 */
+  padding-left: 5px;
 }
+
 .pub-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.05em;
+  line-height: 1.4;
   display: block;
+  margin-bottom: 6px;
 }
+
 .pub-authors {
   font-size: 0.95em;
   display: block;
-  margin: 4px 0;
-  opacity: 0.8; /* 使用透明度而不是固定颜色 */
+  opacity: 0.85; /* 使用透明度而不是固定颜色，自动适应暗黑模式 */
+  margin-bottom: 4px;
 }
+
 .pub-venue {
   font-style: italic;
   font-size: 0.95em;
   display: block;
-  opacity: 0.7;
+  opacity: 0.7; /* 进一步降低透明度，区分层次 */
 }
 
-/* 4. 自适应按钮 - 背景透明，边框适应主题 */
+/* 4. 药丸形链接按钮：透明底色 + 悬停动效 */
 .btn-box {
   display: inline-block;
-  padding: 3px 12px;
-  margin-right: 8px;
-  margin-top: 10px;
+  padding: 4px 14px;
+  margin-right: 10px;
+  margin-top: 12px;
   border-radius: 20px;
-  background-color: rgba(128, 128, 128, 0.05); /* 半透明背景 */
-  color: inherit !important; /* 强制继承主题的文字颜色 */
-  font-size: 0.8em;
+  background-color: transparent; /* 背景透明，完全融入底色 */
+  color: inherit !important; /* 文字颜色随主题变化 */
+  font-size: 0.82em;
   font-weight: 500;
   text-decoration: none !important;
   border: 1px solid rgba(128, 128, 128, 0.3); /* 半透明边框 */
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .btn-box:hover {
-  background-color: rgba(128, 128, 128, 0.15);
+  background-color: #0366d6; /* 悬停时变为醒目的蓝色 */
+  color: #ffffff !important; /* 悬停时文字变为白色 */
   border-color: #0366d6;
-  transform: translateY(-1px);
+  transform: translateY(-2px); /* 轻微上浮 */
+  box-shadow: 0 4px 10px rgba(3, 102, 214, 0.25); /* 蓝色光晕阴影 */
 }
 </style>
 
