@@ -6,7 +6,38 @@ author_profile: true
 ---
 
 <style>
-#main { max-width: 1200px; }
+#main {
+  max-width: 1000px; /* 限制最大宽度，避免在大屏上拉得太开 */
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+/* 修改全局字体风格 */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #333;
+  line-height: 1.6; /* 适当增加行间距，增加呼吸感 */
+  -webkit-font-smoothing: antialiased; /* 让字体看起来更清秀 */
+}
+
+/* 标题字体微调 */
+h1, h2, h3, h4 {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600; /* 调低标题粗细，避免过于笨重 */
+  color: #222;
+  border-bottom: 1px solid #eee; /* 模仿她那种简洁的分隔线 */
+  padding-bottom: 8px;
+}
+
+/* 链接颜色微调 */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 /* 1. 滚动新闻栏 - 优化了重复定义的 li */
 .news-container {
   height: 180px;
@@ -69,29 +100,26 @@ author_profile: true
   color: #555;
 }
 
-/* 4. 链接按钮 - 从黑色改为白色风格 */
 .btn-box {
   display: inline-block;
-  padding: 2px 10px;
-  margin-right: 6px;
-  margin-top: 8px;
-  border-radius: 6px;
-  background-color: #ffffff; /* 背景改为白色 */
-  color: #333333 !important; /* 文字颜色改为深灰色 */
-  font-size: 0.85em;
-  font-weight: 500;
+  padding: 3px 12px; /* 增加一点内边距 */
+  margin-right: 8px;
+  margin-top: 10px;
+  border-radius: 20px; /* 改为圆角矩形，会显得更现代 */
+  background-color: #ffffff;
+  color: #444 !important;
+  font-size: 0.8em;
+  font-weight: 400;
   text-decoration: none !important;
-  border: 1px solid #d1d5da; /* 添加浅灰色边框 */
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* 添加极其轻微的阴影增强质感 */
+  border: 1px solid #e1e4e8;
+  transition: all 0.3s ease;
 }
 
 .btn-box:hover {
-  background-color: #f6f8fa; /* 悬停时稍微变灰 */
-  color: #0366d6 !important; /* 悬停时文字变为蓝色（类似GitHub链接色） */
-  border-color: #babbbd;
-  transform: translateY(-1px);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  background-color: #f3f4f5;
+  border-color: #0366d6;
+  color: #0366d6 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 </style>
 
