@@ -139,7 +139,7 @@ h1 {
 }
 </style>
 
-Hi! I am Zixuan Chen (陈子轩).I am a Ph.D. Candidate at School of Computer Science, [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/). 
+Hi! I am Zixuan Chen (陈子轩). I am a Ph.D. Candidate at School of Computer Science, [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/). 
 
 I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. Yong-Lu Li](https://dirtyharrylyl.github.io/) .
 
