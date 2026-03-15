@@ -178,7 +178,7 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
   <span class="pub-venue">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2025.</span>
   <a href="https://arxiv.org/pdf/2412.13803" class="btn-box">📄 PDF</a>
   <a href="https://zixuan-chen.github.io/M-cube-VOS.github.io/" class="btn-box">🌐 Website</a>
-  <a href="https://github.com/zixuan-chen/M3VOS_Experimentl" class="btn-box">💻 Code</a>
+  <a href="https://github.com/zixuan-chen/M3VOS_Experiment" class="btn-box">💻 Code</a>
   <a href="https://huggingface.co/datasets/Lijiaxin0111/M3_VOS" class="btn-box">📊 Dataset</a>
   <a href="https://github.com/Lijiaxin0111/SemiAuto-Multi-Level-Annotation-Tool" class="btn-box">🛠️ Tool</a>
 </div>
