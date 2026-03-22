@@ -170,11 +170,11 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
 ---
 
 ### 📝 Selected Publications {#publications}
-<div class="pub-note">(* equal contribution)</div>
+<div class="pub-note">(* equal contribution, # corresponding author)</div>
 
 <div class="pub-item">
   <span class="pub-title">M^3-VOS: Multi-Phase, Multi-Transition, and Multi-Scenery Video Object Segmentation</span>
-  <span class="pub-authors"><strong>Zixuan Chen</strong>*, J. Li*, J. Liang, L. Tan, Y. Guo, C. Lu, Y. L. Li.</span>
+  <span class="pub-authors"><strong>Zixuan Chen</strong>*, Jiaxin Li*, Liming Tan, Yejie Guo, Junxuan Liang, Cewu Lu, Yong-Lu Li#</span>
   <span class="pub-venue">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2025.</span>
   <a href="https://arxiv.org/pdf/2412.13803" class="btn-box">📄 PDF</a>
   <a href="https://zixuan-chen.github.io/M-cube-VOS.github.io/" class="btn-box">🌐 Website</a>
@@ -185,7 +185,7 @@ I am currently a member of [RHOS Lab](https://mvig-rhos.com/) advised by [Prof. 
 
 <div class="pub-item">
   <span class="pub-title">Layered neighborhood expansion for incremental multiple graph matching</span>
-  <span class="pub-authors"><strong>Zixuan Chen</strong>, Z. Xie, J. Yan, Y. Zheng, X. Yang.</span>
+  <span class="pub-authors"><strong>Zixuan Chen</strong>, Zhihui Xie, Junchi Yan#, Yinqiang Zheng, Xiaokang Yang</span>
   <span class="pub-venue">European Conference on Computer Vision (<strong>ECCV</strong>), 251-267, 2020.</span>
   <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123550256.pdf" class="btn-box">📄 PDF</a>
   <a href="https://github.com/zhxieml/LNE_IMGM" class="btn-box">💻 Code</a>
